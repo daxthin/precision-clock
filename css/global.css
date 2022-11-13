@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #000;
+}
+
+main {
+    background-color: #151618;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: #fa0036;
+}
+
+.alert {
+    color: yellow;
+}
+
+.default {
+    color: #00FF94;
+}
+
+.number {
+    color: white;
+    font-family: 'Lato';
+    font-size: 40px;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.clock {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: min-content 1px min-content 1px 100px;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+}
+
+.hour {
+    grid-column: 1;
+    grid-row: 1;
+    color: #FF005C;
+    border-bottom: 1px solid #92ABC9;
+}
+
+.minutes {
+    grid-column: 3;
+    grid-row: 2;
+    width: fit-content;
+    color: #00FF94;
+    border-bottom: 1px solid #92ABC9;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: left;
+    width: 120px;
+}
+
+.seconds {
+    grid-column: 1;
+    grid-row: 3;
+    color: #0094FF;
+    border-bottom: 1px solid #92ABC9;
+}
+
+.mseconds {
+    grid-column: 3;
+    grid-row: 4;
+    color: #FB50FF;
+    width: 100px;
+    border-bottom: 1px solid #92ABC9;
+}
+
+.input {
+    width: fit-content;
+    background-color: transparent;
+    border: 0;
+    grid-column: 5;
+    color: white;
+    font-family: 'Lato';
+    padding: 10px;
+    width: fit-content;
+    font-size: 13px;
+    grid-row: 3;
+    border-bottom: 1px solid #92ABC9;
+    align-self: end;
+    transition: 250ms ease;
+    /* margin-left: 4px; */
+}
+
+.input::after {
+    content: 'ms';
+    margin-left: 4px;
+    color: white;
+}
+
+.input:focus{
+    outline: 0;
+    color: #eeff00;
+    transition: 250ms ease;
+}
+
+.line {
+    width: 100%;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    background-color: #92ABC9;
+}
+
+.line.two {
+    grid-column: 4;
+    grid-row: 3;
+}
+
